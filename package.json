@@ -1,0 +1,23 @@
+{
+  "name": "reset-beer-count",
+  "version": "1.0.0",
+  "description": "resets beer count for karlsruhe-koenige.de",
+  "main": "index.ts",
+  "repository": "git@github.com:Treborium/reset-beer-count.git",
+  "author": "Treborium <robertfuchs97@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "compile": "tsc",
+    "package": "yarn compile && yarn install --production --modules-folder compiled/node_modules && cp package.json compiled/package.json",
+    "start": "yarn compile && node compiled/index.js",
+    "test": "jest test --silent"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.80",
+    "@types/node": "^16.4.0",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.952.0"
+  }
+}
